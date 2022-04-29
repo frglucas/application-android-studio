@@ -1,5 +1,9 @@
 package com.example.application.model;
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import java.util.Objects;
 
 public class Company {
@@ -53,10 +57,8 @@ public class Company {
 
     @Override
     public String toString() {
-        return "Company{" +
-                "name='" + name + '\'' +
-                ", catchPhrase='" + catchPhrase + '\'' +
-                ", bs='" + bs + '\'' +
-                '}';
+        return "name: " + name + "\n" +
+                "catchPhrase: " + catchPhrase + "\n" +
+                "bs: " + bs + "\n";
     }
 }

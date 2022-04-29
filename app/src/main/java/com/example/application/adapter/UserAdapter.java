@@ -42,10 +42,10 @@ public class UserAdapter extends RecyclerView.Adapter<UserAdapter.UserViewHolder
         ((TextView) holder.layout.findViewById(R.id.uName)).setText(listUser.get(position).getName());
         ((TextView) holder.layout.findViewById(R.id.uUserName)).setText(listUser.get(position).getUserName());
         ((TextView) holder.layout.findViewById(R.id.uEmail)).setText(listUser.get(position).getEmail());
-        //((TextView) holder.layout.findViewById(R.id.uAddress)).setText(listUser.get(position).getAddress().toString());
+        ((TextView) holder.layout.findViewById(R.id.uAddress)).setText(listUser.get(position).getAddress().toString());
         ((TextView) holder.layout.findViewById(R.id.uPhone)).setText(listUser.get(position).getPhone());
         ((TextView) holder.layout.findViewById(R.id.uWebsite)).setText(listUser.get(position).getWebsite());
-        //((TextView) holder.layout.findViewById(R.id.uCompany)).setText(listUser.get(position).getCompany().toString());
+        ((TextView) holder.layout.findViewById(R.id.uCompany)).setText(listUser.get(position).getCompany().toString());
     }
 
     @Override

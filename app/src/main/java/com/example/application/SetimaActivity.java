@@ -16,6 +16,9 @@ import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.Volley;
 import com.example.application.adapter.PostAdapter;
 import com.example.application.adapter.UserAdapter;
+import com.example.application.model.Address;
+import com.example.application.model.Company;
+import com.example.application.model.Geo;
 import com.example.application.model.Post;
 import com.example.application.model.User;
 
@@ -56,10 +59,19 @@ public class SetimaActivity extends AppCompatActivity implements Response.Listen
                         response.getJSONObject(i).getString("name"),
                         response.getJSONObject(i).getString("username"),
                         response.getJSONObject(i).getString("email"),
-                        null,
+                        new Address(
+                                response.getJSONObject(i).getJSONObject("address").getString("street"),
+                                response.getJSONObject(i).getJSONObject("address").getString("suite"),
+                                response.getJSONObject(i).getJSONObject("address").getString("city"),
+                                response.getJSONObject(i).getJSONObject("address").getString("zipcode"),
+                                new Geo(response.getJSONObject(i).getJSONObject("address").getJSONObject("geo").getString("lat"),
+                                        response.getJSONObject(i).getJSONObject("address").getJSONObject("geo").getString("lng"))
+                                ),
                         response.getJSONObject(i).getString("phone"),
                         response.getJSONObject(i).getString("website"),
-                        null
+                        new Company(response.getJSONObject(i).getJSONObject("company").getString("name"),
+                                response.getJSONObject(i).getJSONObject("company").getString("catchPhrase"),
+                                response.getJSONObject(i).getJSONObject("company").getString("bs"))
                         ));
             } catch(JSONException e) {
                 e.printStackTrace();

@@ -139,9 +139,9 @@ public class User implements Parcelable {
         parcel.writeString(getName());
         parcel.writeString(getUserName());
         parcel.writeString(getEmail());
-        //parcel.writeString(getAddress().toString());
+        parcel.writeString(getAddress().toString());
         parcel.writeString(getPhone());
         parcel.writeString(getWebsite());
-        //parcel.writeString(getCompany().toString());
+        parcel.writeString(getCompany().toString());
     }
 }

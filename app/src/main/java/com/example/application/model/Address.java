@@ -1,6 +1,10 @@
 package com.example.application.model;
 
 
+import android.os.Build;
+
+import androidx.annotation.RequiresApi;
+
 import java.util.Objects;
 
 public class Address {
@@ -74,12 +78,10 @@ public class Address {
 
     @Override
     public String toString() {
-        return "Address{" +
-                "street='" + street + '\'' +
-                ", suite='" + suite + '\'' +
-                ", city='" + city + '\'' +
-                ", zipcode='" + zipcode + '\'' +
-                ", geo=" + geo.toString() +
-                '}';
+        return  "street:" + street + "\n" +
+                "suite:" + suite + "\n" +
+                "city:" + city + "\n" +
+                "zipcode" + zipcode + "\n" +
+                "geo" + geo.toString();
     }
 }
